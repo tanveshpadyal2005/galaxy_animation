@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(2, 2, 38);
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 15rem;
+            align-items: center;
+            position: relative;
+            background-image: url("https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+        }
+
+        .circle {
+            width: 35rem;
+            height: 35rem;
+            background-color: gray;
+            box-shadow: -20px 15px 25px 1px rgba(40, 40, 40, 0.5), inset 30px 30px 20px rgba(0, 0, 0, 0.5), inset 50px 50px 30px 20px rgba(0, 0, 0, 0.509), inset -10px -10px 25px rgba(255, 255, 255, 0.728), inset -15px -15px 40px rgba(255, 255, 255, 0.185);
+            border-radius: 50%;
+            animation: inc 15s linear infinite;
+            position: relative;
+            z-index: 1001;
+
+        }
+
+        .circle-2 {
+            width: 10rem;
+            height: 10rem;
+            background-color: rgba(255, 0, 0, 0.555);
+            background-image: linear-gradient(brown, white, yellow, white, brown, yellow);
+            box-shadow: -20px 15px 25px 1px rgba(40, 40, 40, 0.5), inset 30px 30px 20px rgba(0, 0, 0, 0.5), inset 50px 50px 30px 20px rgba(0, 0, 0, 0.509), inset -10px -10px 25px rgba(255, 255, 255, 0.728), inset -15px -15px 40px rgba(255, 255, 255, 0.185);
+            border-radius: 50%;
+            animation: inc2 3s linear infinite;
+            position: absolute;
+            /* transform:rotate(360deg); */
+
+        }
+
+        @keyframes inc2 {
+            0% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotateX(0);
+            }
+        }
+
+
+        @keyframes inc {
+            0% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(0);
+            }
+        }
+
+        .sun {
+            width: 20rem;
+            height: 20rem;
+            background-color: rgb(255, 224, 48);
+            position: absolute;
+            left: 5%;
+            top: 5%;
+            z-index: 10002;
+            border-radius: 50%;
+            animation: round 2s linear infinite;
+            box-shadow: 0 0 50px 15px rgba(255, 255, 0, 0.447), inset 20px 10px 25px rgb(198, 168, 0), inset -25px -10px 25px rgb(255, 196, 0);
+        }
+
+        @keyframes round {
+            from{
+                transform: rotate(360deg);
+                background-color: rgb(234, 173, 18);
+            }
+            to{
+                transform: rotate(0);
+                background-color: rgb(255, 224, 48);
+            }
+        }
+
+        
+
+        .dots {
+            width: 6rem;
+            height: 5rem;
+            /* background-color: aliceblue; */
+            border-radius: 50%;
+            position: fixed;
+            left: 18rem;
+            top: 12rem;
+            box-shadow: inset 10px 10px 25px rgba(0, 0, 0, 0.283),-5px 10px 20px rgba(51, 51, 51, 0.068);
+        }
+        .dots1 {
+            width: 5rem;
+            height: 5rem;
+            /* background-color: aliceblue; */
+            border-radius: 50%;
+            position: fixed;
+            left: 3rem;
+            top: 20rem;
+            box-shadow: inset 10px 10px 25px rgba(0, 0, 0, 0.283),-5px 10px 20px rgba(51, 51, 51, 0.068);
+        }
+        .dots0 {
+            width: 6rem;
+            height: 6rem;
+            /* background-color: rgba(0, 136, 255, 0.324); */
+            border-radius: 50%;
+            position: fixed;
+            left: 26rem;
+            top: 10rem;
+            box-shadow: inset 10px 10px 25px rgba(0, 0, 0, 0.283),-5px 10px 20px rgba(51, 51, 51, 0.068);
+        }
+        .dots2 {
+            width: 3rem;
+            height: 3rem;
+            /* background-color: aliceblue; */
+            border-radius: 50%;
+            position: fixed;
+            left: 15rem;
+            top: 20rem;
+            box-shadow: inset 10px 10px 25px rgba(0, 0, 0, 0.283),-5px 10px 20px rgba(51, 51, 51, 0.068);
+        }
+        .dots3 {
+            width: 4rem;
+            height: 4rem;
+            /* background-color: aliceblue; */
+            border-radius: 50%;
+            position: fixed;
+            left: 20rem;
+            top: 25rem;
+            box-shadow: inset 10px 10px 25px rgba(0, 0, 0, 0.283),-5px 10px 20px rgba(51, 51, 51, 0.068);
+        }
+        .dots4 {
+            width: 7rem;
+            height: 7rem;
+            /* background-color: aliceblue; */
+            border-radius: 50%;
+            position: fixed;
+            left: 15rem;
+            top: 5rem;
+            box-shadow: inset 10px 10px 25px rgba(0, 0, 0, 0.283),-5px 10px 20px rgba(51, 51, 51, 0.068);
+        }
+
+        .star{
+            width: 10px;
+            height: 10px ;
+            background-color: white;
+            /* border-radius: 0 50% 0 50%; */
+            /* transform: rotate(20deg); */
+            position: absolute;
+            left: 0;
+        }
+
+        .sub-star{
+            width: 11px;
+            height: 11px ;
+            background-color: rgb(255, 255, 255);
+            /* border-radius: 0 50% 0 50%; */
+            transform: rotate(120deg);
+            position: absolute;
+            left: 0;
+        }
+
+        video{
+            position: fixed;
+            z-index: 1000;
+            width: 100%;
+            /* height: 100vh; */
+            
+        }
+    </style>
+</head>
+
+<body>
+    <video src="./galaxy-19641.mp4" autoplay loop></video>
+    <div class="container">
+        <div class="circle">
+            <div class="circle-2">
+            </div>
+            <div class="dots">
+            </div>
+            <div class="dots0">
+            </div>
+            <div class="dots1">
+            </div>
+            <div class="dots2">
+            </div>
+            <div class="dots3">
+            </div>
+            <div class="dots4">
+            </div>
+        </div>
+        <div class="star1">
+            <div class="sub-star1"></div>
+        </div>
+        <div class="star2">
+            <div class="sub-star2"></div>
+        </div>
+        <div class="star3">
+            <div class="sub-star3"></div>
+        </div>
+        <div class="star4">
+            <div class="sub-star4"></div>
+        </div>
+        <div class="star5">
+            <div class="sub-star5"></div>
+        </div>
+        
+        <div class="sun">
+
+        </div>
+    </div>
+</body>
+
+</html>
